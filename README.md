@@ -1,4 +1,5 @@
 # teste-tecnico-backend-2025-trimestre-1
+
 Teste técnico para a posição de Backend Dev. Edição do primeiro trimestre de 2025.
 
 ## A proposta: Upload e Streaming de Vídeos + Cache + Docker
@@ -6,14 +7,14 @@ Teste técnico para a posição de Backend Dev. Edição do primeiro trimestre d
 A ideia é bem simples:
 
 - [ ] uma rota `POST /upload/video` que recebe um **único vídeo** com limite de 10MB e
-    - [ ] retornando o código de status 400 em caso de arquivo com tipo diferente de vídeo
-    - [ ] retornando o código de status 400 em caso de arquivo com tamanho maior que 10MB
-    - [ ] retornando o código de status 204 em caso de sucesso
+  - [ ] retornando o código de status 400 em caso de arquivo com tipo diferente de vídeo
+  - [ ] retornando o código de status 400 em caso de arquivo com tamanho maior que 10MB
+  - [ ] retornando o código de status 204 em caso de sucesso
 - [ ] uma rota `GET /static/video/:filename` que pode receber um Range por cabeçalho para indicar o offset de streaming
-    - [ ] retornando o código de status 404 em caso de não existência de um arquivo
-    - [ ] retornando o conteúdo completo caso nenhum range seja especificado com código de status 200 em caso o arquivo exista no servidor
-    - [ ] retornando a fatia desejada do conteúdo caso o range seja especificado com código de status 206
-    caso o arquivo exista no servidor
+  - [ ] retornando o código de status 404 em caso de não existência de um arquivo
+  - [ ] retornando o conteúdo completo caso nenhum range seja especificado com código de status 200 em caso o arquivo exista no servidor
+  - [ ] retornando a fatia desejada do conteúdo caso o range seja especificado com código de status 206
+        caso o arquivo exista no servidor
 
 Para infra, vamos usar o seguinte conjunto:
 
